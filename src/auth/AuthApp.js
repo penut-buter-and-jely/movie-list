@@ -8,7 +8,7 @@ class AuthApp extends Component {
     render() {
         const dom = this.renderDOM();
 
-        const header = new Header();
+        const header = new Header({ title: 'Sign In' });
         dom.prepend(header.render());
 
         ui.start('#firebaseui-auth-container', {
