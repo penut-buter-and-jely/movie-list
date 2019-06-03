@@ -1,8 +1,13 @@
 import Component from '../Component.js';
+import Header from '../shared/Header.js';
 
 class App extends Component {
     render() {
         const dom = this.renderDOM();
+
+        const header = new Header();
+
+        dom.prepend(header.render());
 
         return dom;
     }
@@ -10,7 +15,7 @@ class App extends Component {
     renderTemplate() {
         return /*html*/ `
             <div>
-                <main>Hello from main</main>
+                <main></main>
             </div>
         `;
     }
