@@ -1,0 +1,63 @@
+[{
+    "vote_count": 1009,
+    "id": 420817,
+    "video": false,
+    "vote_average": 7.3,
+    "title": "Aladdin",
+    "popularity": 499.517,
+    "poster_path": "/3iYQTLGoy7QnjcUYRJy4YrAgGvp.jpg",
+    "original_language": "en",
+    "original_title": "Aladdin",
+    "genre_ids": [
+    12,
+    14,
+    10749,
+    35,
+    10751
+    ],
+    "backdrop_path": "/v4yVTbbl8dE1UP2dWu5CLyaXOku.jpg",
+    "adult": false,
+    "overview": "A kindhearted street urchin named Aladdin embarks on a magical adventure after finding a lamp that releases a wisecracking genie while a power-hungry Grand Vizier vies for the same lamp that has the power to make their deepest wishes come true.",
+    "release_date": "2019-05-22"
+    },
+    {
+    "vote_count": 5339,
+    "id": 299537,
+    "video": false,
+    "vote_average": 7.1,
+    "title": "Captain Marvel",
+    "popularity": 394.508,
+    "poster_path": "/AtsgWhDnHTq68L0lLsUrCnM7TjG.jpg",
+    "original_language": "en",
+    "original_title": "Captain Marvel",
+    "genre_ids": [
+    28,
+    12,
+    878
+    ],
+    "backdrop_path": "/iNUuGUIHeeGsvOPxMRBnytpxxlz.jpg",
+    "adult": false,
+    "overview": "The story follows Carol Danvers as she becomes one of the universe’s most powerful heroes when Earth is caught in the middle of a galactic war between two alien races. Set in the 1990s, Captain Marvel is an all-new adventure from a previously unseen period in the history of the Marvel Cinematic Universe.",
+    "release_date": "2019-03-06"
+    },
+    {
+    "vote_count": 799,
+    "id": 458156,
+    "video": false,
+    "vote_average": 7.3,
+    "title": "John Wick: Chapter 3 – Parabellum",
+    "popularity": 332.425,
+    "poster_path": "/ziEuG1essDuWuC5lpWUaw1uXY2O.jpg",
+    "original_language": "en",
+    "original_title": "John Wick: Chapter 3 – Parabellum",
+    "genre_ids": [
+    80,
+    28,
+    53
+    ],
+    "backdrop_path": "/vVpEOvdxVBP2aV166j5Xlvb5Cdc.jpg",
+    "adult": false,
+    "overview": "Super-assassin John Wick returns with a $14 million price tag on his head and an army of bounty-hunting killers on his trail. After killing a member of the shadowy international assassin’s guild, the High Table, John Wick is excommunicado, but the world’s most ruthless hit men and women await his every turn.",
+    "release_date": "2019-05-15"
+    }
+]

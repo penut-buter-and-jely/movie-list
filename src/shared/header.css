@@ -1,0 +1,14 @@
+.profile img {
+    width: 20px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
