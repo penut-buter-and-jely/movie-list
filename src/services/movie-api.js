@@ -9,7 +9,7 @@ const key = 'api_key=ad4e796c6d9178454e18a3586be79368';
 const movieApi = {
     getMovies(queryProps) {
         let url = '';
-        if(queryProps) {
+        if(queryProps.title) {
             url = `${URL}${search}${key}&query=${queryProps.title}`;
         } 
         else {

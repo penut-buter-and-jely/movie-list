@@ -11,8 +11,6 @@ class MovieList extends Component {
             return dom;
         }
 
-        console.log(movies);
-
         movies.forEach(movie => {
             const movieItem = new MovieItem({ movie });
             dom.appendChild(movieItem.render());

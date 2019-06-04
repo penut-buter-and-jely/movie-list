@@ -4,6 +4,7 @@ import MovieList from '../shared/MovieList.js';
 import Search from '../shared/Search.js';
 
 import movieApi from '../services/movie-api.js';
+import hashStorage from '../utils/hash-storage.js';
 
 class App extends Component {
     render() {
@@ -13,10 +14,21 @@ class App extends Component {
 
         const movieList = new MovieList({ movies: [] });
 
-        movieApi.getMovies()
-            .then(movies => {
-                movieList.update({ movies: movies.results });
-            });
+        function loadMovies() {
+
+            const queryProps = hashStorage.get();
+            
+            movieApi.getMovies(queryProps)
+                .then(movies => {
+                    movieList.update({ movies: movies.results });
+                });
+        }
+
+        loadMovies();
+
+        window.addEventListener('hashchange', () => {
+            loadMovies();
+        });
 
         const search = new Search();
 

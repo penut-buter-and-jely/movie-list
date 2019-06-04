@@ -10,8 +10,6 @@ class Header extends Component {
         dom.appendChild(profile.render());
 
         auth.onAuthStateChanged(user => {
-            console.log(user);
-            
             profile.update({ user });
         });
 
