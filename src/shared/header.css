@@ -11,4 +11,5 @@
 header {
     display: flex;
     justify-content: space-between;
+    color: rgb(50, 174, 79);
 }
