@@ -2,13 +2,20 @@ import Component from '../Component.js';
 import Header from '../shared/Header.js';
 import MovieList from '../shared/MovieList.js';
 
+import movieApi from '../services/movie-api.js';
+
 class App extends Component {
     render() {
         const dom = this.renderDOM();
 
         const header = new Header({ title: 'Movie List' });
 
-        const movieList = new MovieList();
+        const movieList = new MovieList({ movies: [] });
+
+        movieApi.getMovies()
+            .then(movies => {
+                movieList.update({ movies: movies.results });
+            });
 
         const main = dom.querySelector('main');
 
