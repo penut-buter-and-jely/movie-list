@@ -1,6 +1,7 @@
 import Component from '../Component.js';
 import Header from '../shared/Header.js';
 import MovieList from '../shared/MovieList.js';
+import Search from '../shared/Search.js';
 
 import movieApi from '../services/movie-api.js';
 
@@ -17,10 +18,13 @@ class App extends Component {
                 movieList.update({ movies: movies.results });
             });
 
+        const search = new Search();
+
         const main = dom.querySelector('main');
 
         dom.prepend(header.render());
 
+        main.appendChild(search.render());
         main.appendChild(movieList.render());
 
         return dom;
