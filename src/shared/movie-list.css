@@ -16,10 +16,17 @@ li{
     text-align: center;
     background-color: grey;
     color: white;
-
+    position: relative;
 }
 
 li img{
     width: 80%;
     margin-bottom: 10px;
+}
+
+li .favorite-star {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    
 }

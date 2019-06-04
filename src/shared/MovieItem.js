@@ -1,6 +1,23 @@
 import Component from '../Component.js';
+import Favorite from './Favorite.js';
 
 class MovieItem extends Component {
+    render() {
+        const dom = this.renderDOM();
+
+        const favorite = new Favorite({
+            isFavorite: false,
+            toggleFavorite: () => {
+                console.log('add to favorites');
+            }
+        });
+
+        dom.appendChild(favorite.render());
+        
+
+        return dom;
+    }
+
     renderTemplate() {
         const movie = this.props.movie;
 
