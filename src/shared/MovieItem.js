@@ -1,19 +1,30 @@
 import Component from '../Component.js';
 import Favorite from './Favorite.js';
+import { auth, userFavoritesRef } from '../services/firebase.js';
 
 class MovieItem extends Component {
     render() {
         const dom = this.renderDOM();
+        const movie = this.props.movie;
+
+        const userMovieRef = userFavoritesRef
+            .child(auth.currentUser.uid)
+            .child(movie.id);
 
         const favorite = new Favorite({
             isFavorite: false,
             toggleFavorite: () => {
-                console.log('add to favorites');
+                userMovieRef.set({
+                    id: movie.id,
+                    title: movie.title,
+                    poster_path: movie.poster_path
+                });
             }
         });
 
         dom.appendChild(favorite.render());
-        
+
+       
 
         return dom;
     }
