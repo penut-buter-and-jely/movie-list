@@ -21,12 +21,20 @@ class FavoritesApp extends Component {
                 movieList.update({ movies });
             });
 
+        const button = dom.querySelector('.home');
+
+        button.addEventListener('click', () => {
+            window.location = './index.html';
+        });
+
         return dom;
     }
     renderTemplate() {
         return /*html*/ `
             <div>
-                <main></main>
+                <main>
+                    <button class="home">Go Home</button>
+                </main>
             </div>
         `;
     }

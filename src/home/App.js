@@ -36,6 +36,12 @@ class App extends Component {
 
         dom.prepend(header.render());
 
+        const button = dom.querySelector('button');
+
+        button.addEventListener('click', () => {
+            window.location = './favorites.html';
+        });
+
         main.appendChild(search.render());
         main.appendChild(movieList.render());
 
@@ -45,7 +51,9 @@ class App extends Component {
     renderTemplate() {
         return /*html*/ `
             <div>
-                <main></main>
+                <main>
+                    <button class="favorites-button">Favorites</button>
+                </main>
             </div>
         `;
     }
