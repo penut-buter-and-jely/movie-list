@@ -13,18 +13,25 @@ class MovieItem extends Component {
 
         const favorite = new Favorite({
             isFavorite: false,
-            toggleFavorite: () => {
-                userMovieRef.set({
-                    id: movie.id,
-                    title: movie.title,
-                    poster_path: movie.poster_path
-                });
+            toggleFavorite: (makeFavorite) => {
+                if(makeFavorite) {
+                    userMovieRef.set({
+                        id: movie.id,
+                        title: movie.title,
+                        poster_path: movie.poster_path
+                    });
+                } else {
+                    userMovieRef.remove();
+                }
             }
         });
 
         dom.appendChild(favorite.render());
 
-       
+        userMovieRef.on('value', snapshot => {
+            const isFavorite = Boolean(snapshot.val());
+            favorite.update({ isFavorite });
+        });
 
         return dom;
     }

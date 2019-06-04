@@ -4,8 +4,10 @@ class Favorite extends Component {
     render() {
         const button = this.renderDOM();
 
+        const isFavorite = this.props.isFavorite;
+
         button.addEventListener('click', () => {
-            this.props.toggleFavorite();
+            this.props.toggleFavorite(!isFavorite);
         });
 
         return button;
