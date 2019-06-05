@@ -1,0 +1,32 @@
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+
+li{
+    width: 200px;
+    list-style: none;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: grey;
+    color: white;
+    position: relative;
+}
+
+li img{
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+li .favorite-star {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    
+}
