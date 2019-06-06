@@ -2,30 +2,30 @@
 
 const URL = 'https://api.themoviedb.org/3';
 
-const nowPlaying = '/movie/now_playing?';
+const NOW_PLAYING = '/movie/now_playing?';
 
-const movieDetail = `/movie`;
+const MOVIE_DETAIL = `/movie`;
 
-const search = '/search/movie?';
+const SEARCH = '/search/movie?';
 
-const key = 'api_key=ad4e796c6d9178454e18a3586be79368';
+const KEY = 'api_key=ad4e796c6d9178454e18a3586be79368';
 
 
 const movieApi = {
     getMovies(queryProps) {
         let url = '';
         if(queryProps.title) {
-            url = `${URL}${search}${key}&query=${queryProps.title}`;
+            url = `${URL}${SEARCH}${KEY}&query=${queryProps.title}`;
         } 
         else {
-            url = `${URL}${nowPlaying}${key}`;
+            url = `${URL}${NOW_PLAYING}${KEY}`;
         }
         
         return fetch(url)
             .then(response => response.json());
     },
     getMovie(id) {
-        const url = `${URL}${movieDetail}/${id}?${key}`;
+        const url = `${URL}${MOVIE_DETAIL}/${id}?${KEY}`;
         return fetch(url)
             .then(response => response.json());   
     }
