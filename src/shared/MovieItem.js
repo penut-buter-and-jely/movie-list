@@ -15,7 +15,7 @@ class MovieItem extends Component {
         const favorite = new Favorite({
             isFavorite: false,
             toggleFavorite: (makeFavorite) => {
-                updateFavorite(makeFavorite, movie, userMovieRef);
+                updateFavorite(makeFavorite, movie);
             }
         });
 
