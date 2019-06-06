@@ -1,10 +1,15 @@
+// http://api.themoviedb.org/3/movie/504608?api_key=ad4e796c6d9178454e18a3586be79368
+
 const URL = 'https://api.themoviedb.org/3';
 
 const nowPlaying = '/movie/now_playing?';
 
+const movieDetail = `/movie`;
+
 const search = '/search/movie?';
 
 const key = 'api_key=ad4e796c6d9178454e18a3586be79368';
+
 
 const movieApi = {
     getMovies(queryProps) {
@@ -15,9 +20,14 @@ const movieApi = {
         else {
             url = `${URL}${nowPlaying}${key}`;
         }
-
+        
         return fetch(url)
             .then(response => response.json());
+    },
+    getMovie(id) {
+        const url = `${URL}${movieDetail}/${id}?${key}`;
+        return fetch(url)
+            .then(response => response.json());   
     }
     
 };
