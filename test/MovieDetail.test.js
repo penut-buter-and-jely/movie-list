@@ -2,9 +2,9 @@ import MovieDetail from '../src/movie/MovieDetail.js';
 
 const test = QUnit.test;
 
-QUnit.module('test module name');
+QUnit.module('MovieDetail');
 
-test('test description', assert => {
+test('Makes Movie detail from template', assert => {
     // arrange  
     const movie = {
         'title': 'Aladdin',
@@ -20,6 +20,22 @@ test('test description', assert => {
             <p>A kindhearted street urchin named Aladdin embarks on a magical adventure after finding a lamp that releases a wisecracking genie while a power-hungry Grand Vizier vies for the same lamp that has the power to make their deepest wishes come true.</p>
             <p>Release Date: 2019-05-22</p>
         </div>
+    `;
+
+    // act
+    const movieDetail = new MovieDetail({ movie });
+    const rendered = movieDetail.renderTemplate();
+
+    // assert
+    assert.htmlEqual(rendered, expected);
+});
+
+test('Returns div if there is no data', assert => {
+    // arrange  
+    const movie = null;
+
+    const expected = /*html*/ `
+        <div></div>
     `;
 
     // act

@@ -4,6 +4,10 @@ class MovieDetail extends Component {
     renderTemplate() {
         const movie = this.props.movie;
 
+        if(!movie) {
+            return '<div></div>';
+        }
+
         const poster = movie.poster_path 
             ? `http://image.tmdb.org/t/p/w200${movie.poster_path}` 
             : './assets/poster-placeholder.png';
