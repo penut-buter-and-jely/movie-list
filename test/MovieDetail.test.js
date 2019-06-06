@@ -16,6 +16,7 @@ test('Makes Movie detail from template', assert => {
     const expected = /*html*/ `
         <div>
             <h2>Aladdin</h2>
+            <div class="favorite-container"></div>
             <img src="http://image.tmdb.org/t/p/w200/3iYQTLGoy7QnjcUYRJy4YrAgGvp.jpg" alt="Aladdin Poster">
             <p>A kindhearted street urchin named Aladdin embarks on a magical adventure after finding a lamp that releases a wisecracking genie while a power-hungry Grand Vizier vies for the same lamp that has the power to make their deepest wishes come true.</p>
             <p>Release Date: 2019-05-22</p>
