@@ -3,6 +3,7 @@ import './html-equal.js';
 import './html-equal.test.js';
 import './profile.test.js';
 import './MovieItem.test.js';
+import './MovieDetail.test.js';
 
 QUnit.done(() => {
     app.delete();
