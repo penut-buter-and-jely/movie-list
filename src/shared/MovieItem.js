@@ -45,7 +45,7 @@ class MovieItem extends Component {
 
         return /*html*/ `
         <li>
-            <h2>${movie.title}</h2>
+            <a href="./movie.html?id=${movie.id}"><h2>${movie.title}</h2></a>
             <img src="${poster}" alt="${movie.title} Poster">
         </li>
         `;

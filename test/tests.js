@@ -6,4 +6,4 @@ import './MovieItem.test.js';
 
 QUnit.done(() => {
     app.delete();
-}); 
+});
