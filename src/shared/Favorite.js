@@ -13,7 +13,6 @@ class Favorite extends Component {
         return button;
     }
 
-
     renderTemplate() {
         const isFavorite = this.props.isFavorite;
         return /*html*/ `
@@ -23,5 +22,3 @@ class Favorite extends Component {
 }
 
 export default Favorite;
-
-//★ 
