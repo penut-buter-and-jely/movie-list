@@ -1,16 +1,13 @@
 import Component from '../Component.js';
 import Favorite from './Favorite.js';
-import { auth, userFavoritesRef } from '../services/firebase.js';
-import { updateFavorite } from '../services/actions.js';
+import { updateFavorite, getUserMovieFavoriteRef } from '../services/actions.js';
 
 class MovieItem extends Component {
     render() {
         const dom = this.renderDOM();
         const movie = this.props.movie;
 
-        const userMovieRef = userFavoritesRef
-            .child(auth.currentUser.uid)
-            .child(movie.id);
+        const userMovieRef = getUserMovieFavoriteRef(movie.id);
 
         const favorite = new Favorite({
             isFavorite: false,
