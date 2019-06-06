@@ -48,6 +48,12 @@ class MovieDetail extends Component {
 
         return /*html*/ `
             <div>
+                <a href="./">
+                    <button>Home</button>
+                </a>
+                <a href="./favorites.html">
+                    <button>Favorites</button>
+                </a>
                 <h2>${movie.title}</h2>
                 <div class="favorite-container"></div>
                 <img src="${poster}" alt="${movie.title} Poster">

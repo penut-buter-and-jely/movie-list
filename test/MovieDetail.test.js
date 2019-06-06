@@ -15,6 +15,12 @@ test('Makes Movie detail from template', assert => {
 
     const expected = /*html*/ `
         <div>
+            <a href="./">
+                <button>Home</button>
+            </a>
+            <a href="./favorites.html">
+                <button>Favorites</button>
+            </a>
             <h2>Aladdin</h2>
             <div class="favorite-container"></div>
             <img src="http://image.tmdb.org/t/p/w200/3iYQTLGoy7QnjcUYRJy4YrAgGvp.jpg" alt="Aladdin Poster">
