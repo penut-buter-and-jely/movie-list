@@ -1,6 +1,7 @@
 import Component from '../Component.js';
 import Favorite from './Favorite.js';
 import { auth, userFavoritesRef } from '../services/firebase.js';
+import { updateFavorite } from '../services/actions.js';
 
 class MovieItem extends Component {
     render() {
@@ -14,15 +15,7 @@ class MovieItem extends Component {
         const favorite = new Favorite({
             isFavorite: false,
             toggleFavorite: (makeFavorite) => {
-                if(makeFavorite) {
-                    userMovieRef.set({
-                        id: movie.id,
-                        title: movie.title,
-                        poster_path: movie.poster_path
-                    });
-                } else {
-                    userMovieRef.remove();
-                }
+                updateFavorite(makeFavorite, movie, userMovieRef);
             }
         });
 
